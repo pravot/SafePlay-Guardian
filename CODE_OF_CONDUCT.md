@@ -58,14 +58,26 @@ representative at an online or offline event.
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement. Report a Code of Conduct 
-violation by creating an issue with a "Code of Conduct" label.
+### Reporting a Violation
+
+If you believe someone is violating the Code of Conduct, we ask that you report it promptly so we can take appropriate action. You can report a violation by creating an issue in this repository. Please follow these steps:
+
+1. **Create an Issue**: 
+   - Go to the "Issues" tab in this repository and click "New Issue."
+   - Select the appropriate issue template.
+
+2. **Title the Issue**: 
+   - Use a clear and descriptive title, such as "Code of Conduct Violation Report."
+
+3. **Label the Issue**: 
+   - Please select the label "Code of Conduct" to ensure the issue is flagged for attention.
+
+4. **Describe the Concern**: 
+   - Provide as much detail as you are comfortable with regarding the incident. Include information on the nature of the violation, where it occurred, and any other relevant context.
+   - If you prefer, you can submit a brief report and wait for a maintainer to follow up with you privately.
 
 All complaints will be reviewed and investigated promptly and fairly.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
 
 ## Enforcement Guidelines
 
