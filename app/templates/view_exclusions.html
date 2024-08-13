@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>View Exclusions</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Exclusion List</h1>
     <table border="1">
         <tr>
-            <th>ID</th>
-            <th>Name</th>
+            <th>Registration Number</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Aliases</th>
             <th>Date of Birth</th>
+            <th>Age</th>
             <th>Gender</th>
+            <th>Race</th>
+            <th>Hair Color</th>
+            <th>Height</th>
+            <th>Eye Color</th>
+            <th>Weight</th>
             <th>Street</th>
             <th>City</th>
             <th>State</th>
@@ -23,13 +50,23 @@
             <th>Notes</th>
             <th>ID Type</th>
             <th>ID Number</th>
+            <th>Mugshot</th>
         </tr>
         {% for exclusion in exclusions %}
         <tr>
-            <td>{{ exclusion.id }}</td>
-            <td>{{ exclusion.name }}</td>
+            <td>{{ exclusion.registration_number }}</td>
+            <td>{{ exclusion.first_name }}</td>
+            <td>{{ exclusion.middle_name }}</td>
+            <td>{{ exclusion.last_name }}</td>
+            <td>{{ exclusion.aliases }}</td>
             <td>{{ exclusion.date_of_birth }}</td>
+            <td>{{ exclusion.age }}</td>
             <td>{{ exclusion.gender }}</td>
+            <td>{{ exclusion.race }}</td>
+            <td>{{ exclusion.hair_color }}</td>
+            <td>{{ exclusion.height }}</td>
+            <td>{{ exclusion.eye_color }}</td>
+            <td>{{ exclusion.weight }}</td>
             <td>{{ exclusion.street }}</td>
             <td>{{ exclusion.city }}</td>
             <td>{{ exclusion.state }}</td>
@@ -41,6 +78,13 @@
             <td>{{ exclusion.notes }}</td>
             <td>{{ exclusion.id_type }}</td>
             <td>{{ exclusion.id_number }}</td>
+            <td>
+                {% if exclusion.mugshot_data %}
+                    <img src="data:image/jpeg;base64,{{ exclusion.mugshot_data | b64encode | safe }}" alt="Mugshot" style="width:100px;">
+                {% else %}
+                    No Photo
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </table>
