@@ -1,27 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Exclusion</title>
-</head>
-<body>
-    <h1>Add New Exclusion</h1>
-    <form method="POST" action="{{ url_for('main.add_exclusion_page') }}">
-        <label>Name: <input type="text" name="name"></label><br>
-        <label>Date of Birth: <input type="date" name="date_of_birth"></label><br>
-        <label>Gender: <input type="text" name="gender"></label><br>
-        <label>Street: <input type="text" name="street"></label><br>
-        <label>City: <input type="text" name="city"></label><br>
-        <label>State: <input type="text" name="state"></label><br>
-        <label>Zip: <input type="text" name="zip"></label><br>
-        <label>Reason: <input type="text" name="reason"></label><br>
-        <label>Start Date: <input type="date" name="start_date"></label><br>
-        <label>End Date: <input type="date" name="end_date"></label><br>
-        <label>Exclusion Authority: <input type="text" name="exclusion_authority"></label><br>
-        <label>Notes: <textarea name="notes"></textarea></label><br>
-        <label>ID Type: <input type="text" name="id_type"></label><br>
-        <label>ID Number: <input type="text" name="id_number"></label><br>
-        <input type="submit" value="Add Exclusion">
-    </form>
-</body>
-</html>
+<form method="POST" action="{{ url_for('main.add_exclusion_page') }}" enctype="multipart/form-data">
+    <label>First Name: <input type="text" name="first_name" required></label><br>
+    <label>Middle Name: <input type="text" name="middle_name"></label><br>
+    <label>Last Name: <input type="text" name="last_name" required></label><br>
+    <label>Aliases: <input type="text" name="aliases"></label><br>
+    <label>Date of Birth: <input type="date" name="date_of_birth" required></label><br>
+    <label>Gender:
+        <select name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </label><br>
+    <label>Race:
+        <select name="race" required>
+            <option value="Caucasian">Caucasian</option>
+            <option value="African American">African American</option>
+            <option value="Hispanic">Hispanic</option>
+            <option value="Asian">Asian</option>
+            <option value="Other">Other</option>
+        </select>
+    </label><br>
+    <label>Hair Color:
+        <select name="hair_color" required>
+            <option value="Black">Black</option>
+            <option value="Brown">Brown</option>
+            <option value="Blonde">Blonde</option>
+            <option value="Red">Red</option>
+            <option value="Gray">Gray</option>
+            <option value="Bald">Bald</option>
+            <option value="Other">Other</option>
+        </select>
+    </label><br>
+    <label>Height:
+        <select name="height" required>
+            <option value="4'10\"">4'10"</option>
+            <option value="4'11\"">4'11"</option>
+            <option value="5'0\"">5'0"</option>
+            <option value="5'1\"">5'1"</option>
+            <option value="5'2\"">5'2"</option>
+            <option value="5'3\"">5'3"</option>
+            <option value="5'4\"">5'4"</option>
+            <option value="5'5\"">5'5"</option>
+            <option value="5'6\"">5'6"</option>
+            <option value="5'7\"">5'7"</option>
+            <option value="5'8\"">5'8"</option>
+            <option value="5'9\"">5'9"</option>
+            <option value="5'10\"">5'10"</option>
+            <option value="5'11\"">5'11"</option>
+            <option value="6'0\"">6'0"</option>
+            <option value="6'1\"">6'1"</option>
+            <option value="6'2\"">6'2"</option>
+            <option value="6'3\"">6'3"</option>
+            <option value="6'4\"">6'4"</option>
+            <option value="6'5\"">6'5"</option>
+            <option value="6'6\"">6'6"</option>
+            <option value="6'7\"">6'7"</option>
+            <option value="6'8\"">6'8"</option>
+        </select>
+    </label><br>
+    <label>Eye Color:
+        <select name="eye_color" required>
+            <option value="Brown">Brown</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Hazel">Hazel</option>
+            <option value="Gray">Gray</option>
+            <option value="Other">Other</option>
+        </select>
+    </label><br>
+    <label>Weight: <input type="number" name="weight" required></label><br>
+    <label>Street: <input type="text" name="street" required></label><br>
+    <label>City: <input type="text" name="city" required></label><br>
+    <label>State: <input type="text" name="state" required></label><br>
+    <label>Zip: <input type="text" name="zip" required></label><br>
+    <label>Reason:
+        <select name="reason" required>
+            <option value="Cheating">Cheating</option>
+            <option value="Fraud">Fraud</option>
+            <option value="Violence">Violence</option>
+            <option value="Theft">Theft</option>
+            <option value="Other">Other</option>
+        </select>
+    </label><br>
+    <label>Start Date: <input type="date" name="start_date" required></label><br>
+    <label>Exclusion Authority: <input type="text" name="exclusion_authority" required></label><br>
+    <label>Notes: <textarea name="notes"></textarea></label><br>
+    <label>ID Type:
+        <select name="id_type" required>
+            <option value="Driver's License">Driver's License</option>
+            <option value="Passport">Passport</option>
+            <option value="State ID">State ID</option>
+        </select>
+    </label><br>
+    <label>ID Number: <input type="text" name="id_number" required></label><br>
+    <label>Mugshot: <input type="file" name="mugshot" accept="image/*"></label><br>
+    <input type="submit" value="Add Exclusion">
+</form>

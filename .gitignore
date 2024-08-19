@@ -3,3 +3,8 @@
 instance
 */.idea/*
 /.idea/*
+mugshots
+*/mugshots/*
+*/logs/*
+*/tmp/*
+/qodana.yaml
