@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from . import db
 from .models import Exclusion
 from sqlalchemy.exc import IntegrityError
-from werkzeug.utils import secure_filename
 from datetime import datetime
 import os
 
